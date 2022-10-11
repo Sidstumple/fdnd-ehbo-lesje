@@ -43,13 +43,7 @@ li a {
   color: inherit;
 }
 
-/* @font-face {
-   src: url(../assets/fonts/Inter-Variable.woff2) format('woff2'), url(../assets/fonts/Inter-Variable.woff) format('woff'), url(../assets/fonts/Inter-Variable.ttf) format('ttf'); 
-  font-weight: normal;
-  font-family: Inter-Variable;
-  font-style: normal;
-  font-display: swap;
-} */
+@import url("https://rsms.me/inter/inter.css");
 
 * {
   box-sizing: border-box;
