@@ -29,3 +29,12 @@ if (contrastTrigger) {
 //     })
 //   })
 // }
+
+const cursor = document.querySelector('.cursor')
+if (cursor) {
+  window.addEventListener('mousemove', (event) => {
+    console.log(event)
+    cursor.style.transform = 'translateX(' + (event.clientX - 8) + 'px) translateY('+ (event.clientY - 8) + 'px)'
+    // cursor.style.transform.translateY = event.clientY + 'px'
+  })
+}

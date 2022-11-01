@@ -70,6 +70,23 @@ body.extra-contrast .header__contrast-trigger svg {
   transform: rotate(180deg);
 }
 
+/* CURSOR */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  background: var(--c-blue);
+  z-index: 10;
+  transition: transform 0.2s var(--bezier);
+}
+@media (max-width: 750px) {
+  .cursor {
+    display: none;
+  }
+}
+
 /* HEADER */
 .header {
   width: 100%;
