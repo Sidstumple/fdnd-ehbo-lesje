@@ -80,6 +80,7 @@ body.extra-contrast .header__contrast-trigger svg {
   background: var(--c-blue);
   z-index: 10;
   transition: transform 0.2s var(--bezier);
+  pointer-events: none;
 }
 @media (max-width: 750px) {
   .cursor {
