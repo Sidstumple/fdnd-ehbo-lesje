@@ -33,8 +33,20 @@ if (contrastTrigger) {
 const cursor = document.querySelector('.cursor')
 if (cursor) {
   window.addEventListener('mousemove', (event) => {
-    console.log(event)
+    // console.log(event)
     cursor.style.transform = 'translateX(' + (event.clientX - 8) + 'px) translateY('+ (event.clientY - 8) + 'px)'
     // cursor.style.transform.translateY = event.clientY + 'px'
+  })
+}
+
+
+const form = document.querySelector('.form')
+if (form) {
+  form.addEventListener('submit', (event) => {
+    event.preventDefault()
+    const formData = new FormData(form)
+    for (const [key, value] of formData) {
+      console.log(`${key}: ${value}\n`)
+    }
   })
 }

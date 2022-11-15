@@ -79,6 +79,42 @@
     </div>
   </section>
 
+  <section class="form-container">
+    <form class="form" novalidate>
+      <div class="form__input">
+        <input type="text" name="firstname" id="firstname" placeholder="Stefan" required>
+        <label for="firstname">
+          Voornaam
+        </label>
+      </div>
+      <div class="form__input">
+        <input type="text" name="lastname" id="lastname" placeholder="van der Kort" required>
+        <label for="lastname">
+          Achternaam
+        </label>
+      </div>
+      <div class="form__input">
+        <input type="email" name="email" id="email" placeholder="stefan.van.der.kort@hva.nl" required>
+        <label for="email">
+          E-mail
+        </label>
+      </div>
+      <div class="form__input form__input--radio">
+        <input type="radio" name="underage" id="underage" checked>
+        <label for="underage">
+          18-
+        </label>
+        <input type="radio" name="underage" id="ofage">
+        <label for="ofage">
+          18+
+        </label>
+      </div>
+      <button type="submit">
+        Verstuur✨
+      </button>
+    </form>
+  </section>
+
   <footer class="footer">
     <div class="footer__top">
       <nav class="footer__nav">

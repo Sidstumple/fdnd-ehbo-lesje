@@ -226,13 +226,11 @@ body.extra-contrast .header__contrast-trigger svg {
 .page-header__title::before {
   content: '';
   position: absolute;
-  /* background-color: hotpink; */
   width: 1.5rem;
   height: 1.5rem;
   top: 0;
   right: -1.5rem;
   border-radius: 50%;
-  /* box-shadow: -1rem -1rem 0 0 var(--c-salmon); */
   box-shadow: -0.75rem -0.75rem 0 0 var(--c-salmon);
 }
 
@@ -299,6 +297,96 @@ body.extra-contrast .header__contrast-trigger svg {
   flex-grow: 1;
   min-width: 300px;
 }
+
+/* FORM */
+
+.form-container {
+  padding: 3.75rem clamp(1.5rem, calc(120 / 1440 * 100vw), 7.5rem) 1.5rem;
+}
+
+.form__input {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  width: 100%;
+}
+
+.form__input + .form__input {
+  margin-top: 1rem;
+}
+
+label[for="underage"] {
+  margin-top: 1rem;
+}
+
+.form__input input {
+  width: 100%;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: inherit;
+  border: 1px solid currentColor;
+}
+
+.form__input input::placeholder {
+  color: var(--c-blue);
+  opacity: 0.5;
+}
+
+.form__input input[type="radio"] {
+  position: absolute;
+  left: -9999px;
+
+  width: 1px;
+  height: 1px;
+}
+
+.form__input input[type="radio"]:focus + label {
+  border: 1px solid blue;
+}
+
+
+.form__input input[type="radio"]:checked + label::after {
+  opacity: 1;
+}
+
+.form__input input[type="radio"] + label {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+
+.form__input input[type="radio"] + label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+}
+
+.form__input input[type="radio"] + label::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 8px;
+  height: 8px;
+  background: currentColor;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.form button {
+  background-color: var(--c-blue);
+  color: var(--c-salmon);
+  padding: 1rem;
+  font-size: 1rem;
+  margin-top: 2rem;
+  border: none;
+}
+
 
 /* FOOTOR */
 
