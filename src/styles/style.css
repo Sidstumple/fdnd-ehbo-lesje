@@ -180,6 +180,20 @@ body.extra-contrast .header__contrast-trigger svg {
   font-weight: 800;
   letter-spacing: -0.04em;
   font-size: 1.5rem;
+  
+  transform: translateY(1rem);
+  opacity: 0;
+}
+
+.header__item:nth-child(1) {
+  animation: fade-up 0.4s 0.2s ease-out forwards;
+}
+.header__item:nth-child(2) {
+  animation: fade-up 0.4s 0.3s ease-out forwards;
+
+}
+.header__item:nth-child(3) {
+  animation: fade-up 0.4s 0.4s ease-out forwards;
 }
 
 .header__link {
@@ -239,11 +253,24 @@ body.extra-contrast .header__contrast-trigger svg {
   font-weight: 800;
   letter-spacing: -0.04em;
   font-size: 3rem;
+  transform: translateY(1rem);
+  opacity: 0;
+  animation: fade-up 0.4s 0.4s ease-out forwards;
 }
 
 .page-header__title h2 {
   font-size: 0.875rem;
   letter-spacing: -0.04em;
+  transform: translateY(1rem);
+  opacity: 0;
+  animation: fade-up 0.4s 0.3s ease-out forwards;
+}
+
+@keyframes fade-up {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .page-header__image img {
@@ -385,6 +412,68 @@ label[for="underage"] {
   font-size: 1rem;
   margin-top: 2rem;
   border: none;
+}
+
+/* TEXT */
+
+.xlarge-heading {
+  font-size: 2rem;
+  line-height: 1.25;
+}
+
+.large-heading {
+  font-size: 1.5rem;
+}
+
+.medium-heading {
+  font-size: 1.25rem;
+}
+
+.small-heading {
+  font-size: 1.125rem;
+}
+
+
+.text {
+  max-width: 600px;
+  margin: clamp(1.5rem, calc(120 / 1440 * 100vw), 7.5rem) auto 0;
+}
+
+.text p {
+  line-height: 1.5;
+}
+
+.text .large-heading + p {
+  margin-top: 1em;
+}
+
+.text p + p {
+  margin-top: 0.75em;
+}
+
+.text p + .button {
+  margin-top: 1em;
+}
+
+.text * + .large-heading {
+  margin-top: 1.5em;
+}
+
+.text .large-heading + .medium-heading {
+  margin-top: 0.5em;
+}
+
+.text .medium-heading + p {
+  margin-top: 1em;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  background-color: var(--c-blue);
+  color: var(--c-salmon);
+  border-radius: 2rem;
 }
 
 
