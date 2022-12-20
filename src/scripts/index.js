@@ -30,14 +30,7 @@ if (contrastTrigger) {
 //   })
 // }
 
-const cursor = document.querySelector('.cursor')
-if (cursor) {
-  window.addEventListener('mousemove', (event) => {
-    // console.log(event)
-    cursor.style.transform = 'translateX(' + (event.clientX - 8) + 'px) translateY('+ (event.clientY - 8) + 'px)'
-    // cursor.style.transform.translateY = event.clientY + 'px'
-  })
-}
+
 
 
 const form = document.querySelector('.form')
@@ -48,5 +41,31 @@ if (form) {
     for (const [key, value] of formData) {
       console.log(`${key}: ${value}\n`)
     }
+  })
+}
+
+const allLinks = [...document.querySelectorAll('a')]
+
+const cursor = document.querySelector('.cursor')
+if (cursor) {
+  window.addEventListener('mousemove', (event) => {
+    // console.log(event)
+    cursor.style.transform = 'translateX(' + (event.clientX - 8) + 'px) translateY('+ (event.clientY - 8) + 'px)'
+    if (allLinks) {
+      const filtered = allLinks.filter(link => link == event.target)
+      if (filtered.length) {
+        const linkie = filtered[0].getAttribute('href')
+        if (linkie == '/') {
+          cursor.innerText = 'homeee'
+        } else {
+          cursor.innerText = linkie
+        }
+      } else {
+        cursor.innerText = ''
+      }
+    }
+    
+    
+
   })
 }

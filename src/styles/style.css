@@ -75,9 +75,14 @@ body.extra-contrast .header__contrast-trigger svg {
   position: fixed;
   top: 0;
   left: 0;
-  width: 1rem;
-  height: 1rem;
-  background: var(--c-blue);
+  padding: 2px 1rem;
+  border-radius: 1rem;
+  min-height: 1rem;
+  min-width: 1rem;
+  background: rgba(255, 196, 143, 0.5);
+  -webkit-backdrop-filter: blur(1rem);
+  backdrop-filter: blur(1rem);
+  border: 1px solid var(--c-blue);
   z-index: 10;
   transition: transform 0.2s var(--bezier);
   pointer-events: none;
@@ -293,6 +298,26 @@ body.extra-contrast .header__contrast-trigger svg {
   }
 }
 
+/* MARQUEE */
+.marquee {
+  /* width: 100%; */
+  margin: 1.25rem clamp(1.5rem, calc(120 / 1440 * 100vw), 7.5rem) 0;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 1.5rem;
+}
+
+.marquee p {
+  width: max-content;
+  animation: to-the-left 15s linear infinite;
+}
+
+
+@keyframes to-the-left {
+  to {
+    transform: translateX(calc(-100% / 5));
+  }
+}
 
 /* TEXT WITH IMAGE */
 .text-with-image {
