@@ -222,6 +222,7 @@ body.extra-contrast .header__contrast-trigger svg {
 .page-header {
   width: 100%;
   padding: 1.25rem clamp(1.5rem, calc(120 / 1440 * 100vw), 7.5rem) 0;
+  transform: translateY(100px);
 }
 
 .page-header__image {
@@ -438,6 +439,68 @@ label[for="underage"] {
   margin-top: 2rem;
   border: none;
 }
+
+
+
+/* SWIPERRR */
+.swiper {
+  --swiper-theme-color: var(--c-blue);
+}
+
+.swiper-pagination-progressbar {
+  background: rgba(74, 71, 255, 0.5);
+}
+
+
+.swiper-scrollbar { 
+  background: rgba(74, 71, 255, 0.5);
+}
+
+.swiper-scrollbar-drag {
+  background: rgba(74, 71, 255, 0.8);
+}
+
+.swiper-slide {
+  height: 30em;
+  overflow: hidden;
+}
+
+.swiper-slide img {
+  width: calc(100% + 200px);
+  height: 100%;
+  margin-left: -100px;
+  object-fit: cover;
+}
+
+.swiper-button-prev::after {
+  content: unset;
+}
+
+.swiper-button-prev svg {
+  transform: rotate(180deg);
+}
+
+.swiper-button-next::after {
+  content: unset;
+}
+
+
+/* SCROLL TITLE */
+
+.scroll-title {
+  --x: 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.scroll-title h2 {
+  font-size: 12vw;
+  white-space: nowrap;
+  padding: 4vw;
+  width: max-content;
+  transform: translateX(calc((-100% + 100vw) * var(--x)));
+}
+
 
 /* TEXT */
 

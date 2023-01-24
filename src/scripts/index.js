@@ -64,8 +64,64 @@ if (cursor) {
         cursor.innerText = ''
       }
     }
-    
-    
-
   })
 }
+
+gsap.to(".text", {
+  scrollTrigger: {
+    trigger: ".text",
+    scrub: 1,
+    start: 'top-=200',
+    end: 'bottom-=500',
+    // markers: true,
+  }, 
+  x: 100
+});
+
+gsap.to(".scroll-title h2", {
+  scrollTrigger: {
+    trigger: ".scroll-title",
+    scrub: 1,
+    start: 'top-=500',
+    end: 'bottom-=300',
+    markers: true,
+  }, 
+  '--x': 1
+});
+
+
+// SWIPERRRR
+
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  // direction: 'vertical',
+  loop: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: true,
+  },
+  speed: 500,
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'progressbar'
+  },
+  parallax: true,
+  spaceBetween: 100,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+  },
+  breakpoints: {
+    756: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+  }
+});
