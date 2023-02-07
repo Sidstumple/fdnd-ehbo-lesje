@@ -125,3 +125,57 @@ const swiper = new Swiper('.swiper', {
     },
   }
 });
+
+
+const textAnimationElements = document.querySelectorAll('.text-animation *')
+
+if (textAnimationElements) {
+  
+  window.addEventListener('mousemove', (event) => {
+    const xPercentage = (event.clientX / window.innerWidth) - 0.5
+    const yPercentage = (event.clientY / window.innerHeight) - 0.5
+    
+    gsap.to(textAnimationElements, {
+      x: xPercentage * 150,
+      y: yPercentage * 150,
+      stagger: {
+        each: 0.03,
+        from: 'center',
+      },
+      ease: 'power2.out'
+    })
+
+  })
+}
+
+
+const linkieLink = document.querySelector('.linkie__link')
+
+const allNows = document.querySelectorAll('.linkie__fake-text')
+
+if (allNows) {
+  linkieLink.addEventListener('mouseenter', () => {
+    allNows.forEach((now, index) => {
+      let y = 'random(-120, -160)%';
+      if (index > 2) {
+        y = 'random(120, 160)%';
+      }
+
+      gsap.to(now, {
+        x: 'random(-100, 100)%',
+        y: y,
+        delay: index * 0.04
+      })
+    })
+  })
+  linkieLink.addEventListener('mouseleave', () => {
+    allNows.forEach((now, index) => {
+
+      gsap.to(now, {
+        x: 0,
+        y: 0,
+        delay: index * 0.04
+      })
+    })
+  })
+}

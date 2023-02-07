@@ -565,6 +565,75 @@ label[for="underage"] {
 }
 
 
+/* TEXT ANIMATION */
+
+.text-animation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+
+.text-animation h2, .text-animation span {
+  font-size: 20vw;
+  font-weight: 600;
+} 
+
+.text-animation span {
+  position: absolute;
+  -webkit-text-stroke: 1px var(--c-blue);
+  text-stroke: 1px var(--c-blue);
+  color: transparent;
+}
+
+
+/* LINKIE */
+
+.linkie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50vh;
+}
+
+.linkie__link {
+  position: relative;
+  font-size: 12vw;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid currentColor;
+  padding: 1vw 3vw;
+  border-radius: 10vw;
+}
+
+.linkie__link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: hotpink;
+  border-radius: inherit;
+  z-index: -1;
+  clip-path: inset(0 100% 0 0 round 10vw);
+  transition: 0.4s ease-out;
+}
+
+.linkie__link:hover::before {
+  clip-path: inset(0 0 0 0 round 10vw);
+
+}
+
+.linkie__fake-text {
+  position: absolute;
+  right: 3vw;
+  color: hotpink;
+}
+
+
 /* FOOTOR */
 
 .footer {
