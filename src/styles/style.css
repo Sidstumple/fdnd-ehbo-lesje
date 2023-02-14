@@ -690,3 +690,51 @@ label[for="underage"] {
 .footer__link {
   text-decoration: none;
 }
+
+
+/* ABOUT PAGE */
+.clip-header {
+  --progress: 1;
+  position: relative;
+  width: 100%;
+  padding-bottom: 200vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -100vh;
+  clip-path: inset(0 0 50%);
+}
+
+.clip-header__background-clip {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(calc(var(--progress) * 10%) calc(var(--progress) * 10%) 0);
+}
+
+.clip-header__background-clip img {
+  transform-origin: center bottom;
+  position: sticky;
+  top: 0;
+  margin-top: -100vh;
+}
+
+.clip-header img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+
+.clip-header__foreground-clip img {
+  height: 50vw;
+  transform: translateY(-5vw);
+}
+
+.clip-header__foreground-clip {
+  position: relative;
+  width: 30vw;
+  height: 40vw;
+  clip-path: inset(calc((1 - var(--progress)) * 5%));
+}
+
+

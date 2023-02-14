@@ -84,7 +84,7 @@ gsap.to(".scroll-title h2", {
     scrub: 1,
     start: 'top-=500',
     end: 'bottom-=300',
-    markers: true,
+    // markers: true,
   }, 
   '--x': 1
 });
@@ -153,7 +153,7 @@ const linkieLink = document.querySelector('.linkie__link')
 
 const allNows = document.querySelectorAll('.linkie__fake-text')
 
-if (allNows) {
+if (allNows.length) {
   linkieLink.addEventListener('mouseenter', () => {
     allNows.forEach((now, index) => {
       let y = 'random(-120, -160)%';
@@ -179,3 +179,38 @@ if (allNows) {
     })
   })
 }
+
+
+
+
+gsap.to(".clip-header", {
+  scrollTrigger: {
+    trigger: ".clip-header",
+    scrub: 1,
+    start: 'top',
+    end: 'top+=200',
+    // markers: true,
+  }, 
+  '--progress': 0
+});
+
+gsap.to(".clip-header__background-clip img", {
+  scrollTrigger: {
+    trigger: ".clip-header",
+    scrub: 1,
+    start: 'top',
+    end: 'top+=200',
+  }, 
+  scale: 1.05
+});
+
+gsap.to(".clip-header__foreground-clip img", {
+  scrollTrigger: {
+    trigger: ".clip-header",
+    scrub: 1,
+    start: 'top',
+    end: 'top+=200',
+    // markers: true,
+  }, 
+  y: 0
+});
