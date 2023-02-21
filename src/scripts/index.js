@@ -214,3 +214,15 @@ gsap.to(".clip-header__foreground-clip img", {
   }, 
   y: 0
 });
+
+
+gsap.to(".clip-container", {
+  scrollTrigger: {
+    trigger: ".clip-container",
+    scrub: 1,
+    start: 'top',
+    end: 'top+=500',
+    // markers: true,
+  }, 
+  '--progress': 1
+});
