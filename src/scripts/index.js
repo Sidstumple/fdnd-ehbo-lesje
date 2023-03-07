@@ -66,32 +66,33 @@ if (cursor) {
     }
   })
 }
+if (document.querySelector('.text')) {
+  gsap.to(".text", {
+    scrollTrigger: {
+      trigger: ".text",
+      scrub: 1,
+      start: 'top-=200',
+      end: 'bottom-=500',
+      // markers: true,
+    }, 
+    x: 100
+  });
+}
 
-gsap.to(".text", {
-  scrollTrigger: {
-    trigger: ".text",
-    scrub: 1,
-    start: 'top-=200',
-    end: 'bottom-=500',
-    // markers: true,
-  }, 
-  x: 100
-});
-
-gsap.to(".scroll-title h2", {
-  scrollTrigger: {
-    trigger: ".scroll-title",
-    scrub: 1,
-    start: 'top-=500',
-    end: 'bottom-=300',
-    // markers: true,
-  }, 
-  '--x': 1
-});
-
+if (document.querySelector('.scroll-title')) {
+  gsap.to(".scroll-title h2", {
+    scrollTrigger: {
+      trigger: ".scroll-title",
+      scrub: 1,
+      start: 'top-=500',
+      end: 'bottom-=300',
+      // markers: true,
+    }, 
+    '--x': 1
+  });
+}
 
 // SWIPERRRR
-
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   // direction: 'vertical',
@@ -129,12 +130,10 @@ const swiper = new Swiper('.swiper', {
 
 const textAnimationElements = document.querySelectorAll('.text-animation *')
 
-if (textAnimationElements) {
-  
+if (textAnimationElements.length) {
   window.addEventListener('mousemove', (event) => {
     const xPercentage = (event.clientX / window.innerWidth) - 0.5
     const yPercentage = (event.clientY / window.innerHeight) - 0.5
-    
     gsap.to(textAnimationElements, {
       x: xPercentage * 150,
       y: yPercentage * 150,
@@ -182,7 +181,7 @@ if (allNows.length) {
 
 
 
-
+if (document.querySelector('.clip-container')) {
 gsap.to(".clip-header", {
   scrollTrigger: {
     trigger: ".clip-header",
@@ -215,14 +214,81 @@ gsap.to(".clip-header__foreground-clip img", {
   y: 0
 });
 
+  gsap.to(".clip-container", {
+    scrollTrigger: {
+      trigger: ".clip-container",
+      scrub: 1,
+      start: 'top',
+      end: 'top+=500',
+      // markers: true,
+    }, 
+    '--progress': 1
+  });
+}
 
-gsap.to(".clip-container", {
+
+gsap.to('.header-text-animation h1 span', {
   scrollTrigger: {
-    trigger: ".clip-container",
-    scrub: 1,
+    trigger: ".header-text-animation",
+    scrub: 2,
     start: 'top',
-    end: 'top+=500',
-    // markers: true,
-  }, 
-  '--progress': 1
-});
+    end: 'top+=100',
+  },
+  '--y': -1,
+  '--rotate': -1,
+  stagger: 0.1
+})
+
+const textAnimationContainer = document.querySelector('.header-text-animation')
+const grace = document.querySelector('.grace')
+
+if (textAnimationContainer) {
+  const mousePosition = {}
+  let doAnimation = false
+  textAnimationContainer.addEventListener('mouseenter', () => doAnimation = true)
+  textAnimationContainer.addEventListener('mouseleave', () => doAnimation = false)
+  
+  textAnimationContainer.addEventListener('mousemove', (event) => {
+    const xPercentage = (event.clientX / window.innerWidth) - 0.5
+    const yPercentage = (event.clientY / window.innerHeight) - 0.5
+    mousePosition.x = xPercentage
+    mousePosition.y = yPercentage
+    gsap.to(grace, {
+      '--x': xPercentage,
+      '--y': yPercentage
+    })
+  })
+
+  const maxImages = 5;
+  const images = []
+  let lastPosition = {}
+  setInterval(() => {
+    if (doAnimation) {
+      if (mousePosition.x == lastPosition.x) {
+        lastPosition.x = mousePosition.x
+      } else {
+        lastPosition.x = mousePosition.x
+        const newImage = grace.querySelector('img').cloneNode(true)
+        grace.appendChild(newImage)
+        gsap.fromTo(newImage, {
+          '--x': mousePosition.x,
+          '--y': mousePosition.y,
+          opacity: 1,
+          ease: 'power4.out'
+        }, {
+          '--y': mousePosition.y - 0.1,
+          onComplete: () => {
+            gsap.to(newImage, {
+              opacity: 0,
+              duration: 0.3,
+              onComplete: () => {
+                grace.removeChild(newImage)
+              }
+            })
+          }
+        })
+        images.push(newImage)
+      }
+    }
+  }, 200)
+}

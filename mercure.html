@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./src/styles/style.css">
+  <title>FDND EHBO</title>
+
+</head>
+
+<body>
+  <div class="cursor"></div>
+  <header class="header">
+    <nav class="header__nav">
+      <a href="/" class="header__logo">
+        <span class="sr-only">
+          FDND Home
+        </span>
+        <svg width="93" height="52" viewBox="0 0 94 53" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="Group" transform="translate(0.500000, 0.500000)" fill-rule="nonzero">
+            <g>
+              <rect id="Rectangle" class="logo-salmon" x="0.5" y="3.5" width="89" height="48" rx="7.5"></rect>
+              <path
+                d="M82,3 C86.418278,3 90,6.581722 90,11 L90,44 C90,48.418278 86.418278,52 82,52 L8,52 C3.581722,52 0,48.418278 0,44 L0,11 C0,6.581722 3.581722,3 8,3 L82,3 Z M82,4 L8,4 C4.13400675,4 1,7.13400675 1,11 L1,44 C1,47.8659932 4.13400675,51 8,51 L82,51 C85.8659932,51 89,47.8659932 89,44 L89,11 C89,7.13400675 85.8659932,4 82,4 Z"
+                id="Rectangle" class="logo-blue"></path>
+              <rect id="Rectangle" class="logo-salmon" x="3.5" y="0.5" width="89" height="48" rx="7.5"></rect>
+              <path
+                d="M85,0 C89.418278,0 93,3.581722 93,8 L93,41 C93,45.418278 89.418278,49 85,49 L11,49 C6.581722,49 3,45.418278 3,41 L3,8 C3,3.581722 6.581722,0 11,0 L85,0 Z M85,1 L11,1 C7.13400675,1 4,4.13400675 4,8 L4,41 C4,44.8659932 7.13400675,48 11,48 L85,48 C88.8659932,48 92,44.8659932 92,41 L92,8 C92,4.13400675 88.8659932,1 85,1 Z"
+                id="Rectangle" class="logo-blue"></path>
+              <polygon id="Path" class="logo-blue"
+                points="22.3945 33 18 33 18 16 27.7604 16 27.7604 19.686 22.3945 19.686 22.3945 22.9302 27.3425 22.9302 27.3425 26.6163 22.3945 26.6163">
+              </polygon>
+              <path
+                d="M43.5656,24.1395 C43.5656,26.1163 43.2078,27.7597 42.4924,29.0698 C41.7769,30.3798 40.7677,31.3643 39.4648,32.0233 C38.1695,32.6744 36.6444,33 34.8896,33 L29.5462,33 L29.5462,16 L35.2624,16 C37.0398,16 38.546,16.314 39.7811,16.9419 C41.0162,17.5698 41.9539,18.4884 42.594,19.6977 C43.2417,20.907 43.5656,22.3876 43.5656,24.1395 Z M38.9339,24.3023 C38.9339,23.2713 38.7983,22.4186 38.5272,21.7442 C38.2636,21.062 37.8644,20.5543 37.3297,20.2209 C36.795,19.8798 36.121,19.7093 35.3076,19.7093 L34.0085,19.7093 L34.0085,29.2326 L35.0026,29.2326 C36.3582,29.2326 37.3523,28.8295 37.9849,28.0233 C38.6176,27.2093 38.9339,25.969 38.9339,24.3023 Z"
+                id="Shape" class="logo-blue"></path>
+              <path
+                d="M61.3363,33 L55.4846,33 L49.4521,21.0233 L49.3504,21.0233 C49.3881,21.3876 49.422,21.8256 49.4521,22.3372 C49.4822,22.8488 49.5086,23.3721 49.5312,23.907 C49.5538,24.4341 49.5651,24.9109 49.5651,25.3372 L49.5651,33 L45.6112,33 L45.6112,16 L51.4403,16 L57.4502,27.814 L57.518,27.814 C57.4954,27.4419 57.4728,27.0116 57.4502,26.5233 C57.4276,26.0271 57.405,25.5271 57.3824,25.0233 C57.3674,24.5194 57.3598,24.0736 57.3598,23.686 L57.3598,16 L61.3363,16 L61.3363,33 Z"
+                id="Path" class="logo-blue"></path>
+              <path
+                d="M78,24.1395 C78,26.1163 77.6423,27.7597 76.9268,29.0698 C76.2113,30.3798 75.2022,31.3643 73.8993,32.0233 C72.6039,32.6744 71.0788,33 69.3241,33 L63.9807,33 L63.9807,16 L69.6969,16 C71.4742,16 72.9805,16.314 74.2156,16.9419 C75.4507,17.5698 76.3883,18.4884 77.0285,19.6977 C77.6762,20.907 78,22.3876 78,24.1395 Z M73.3683,24.3023 C73.3683,23.2713 73.2328,22.4186 72.9616,21.7442 C72.698,21.062 72.2989,20.5543 71.7642,20.2209 C71.2295,19.8798 70.5554,19.7093 69.742,19.7093 L68.4429,19.7093 L68.4429,29.2326 L69.437,29.2326 C70.7926,29.2326 71.7868,28.8295 72.4194,28.0233 C73.052,27.2093 73.3683,25.969 73.3683,24.3023 Z"
+                id="Shape" class="logo-blue"></path>
+            </g>
+          </g>
+        </g>
+      </svg>
+      </a>
+      <button class="header__trigger" aria-label="Navigatie openen" aria-pressed="true">
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="header__list">
+        <li class="header__item">
+          <a href="./about.html" class="header__link">
+            about
+          </a>
+        </li>
+        <li class="header__item">
+          <a href="./yolo.html" class="header__link">
+            yolo
+          </a>
+        </li>
+        <li class="header__item">
+          <a href="#contact" class="header__link">
+            contact
+          </a>
+        </li>
+      </ul>
+      <button class="header__contrast-trigger" aria-label="Contrast aanpassen">
+        <svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M36 66C52.5685 66 66 52.5685 66 36C66 19.4315 52.5685 6 36 6C19.4315 6 6 19.4315 6 36C6 52.5685 19.4315 66 36 66ZM36 72C55.8823 72 72 55.8823 72 36C72 16.1177 55.8823 0 36 0C16.1177 0 0 16.1177 0 36C0 55.8823 16.1177 72 36 72Z" />
+          <path
+            d="M30.5 36C30.5 55.8823 55.8823 72 36 72C16.1177 72 0 55.8823 0 36C0 16.1177 16.1177 0 36 0C55.8823 0 30.5 16.1177 30.5 36Z" />
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <section class="header-text-animation">
+    <h1 class="">
+      <span style="--index: 0">V</span>
+      <span style="--index: 1">R</span>
+      <span style="--index: 2">O</span>
+      <span style="--index: 3">U</span>
+      <span style="--index: 4">W</span>
+      <span style="--index: 5">E</span>
+      <span style="--index: 6">N</span>
+    </h1>
+    <p>8 maart is het Internationale Vrouwendag</p>
+    <p>SCROLLIE ↓</p>
+    <div class="grace">
+      <img src="./src/assets/img/grace-hopper.png" alt="Grace Hopper">
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="footer__top">
+      <nav class="footer__nav">
+        <a href="/" class="footer__logo">
+          <span class="sr-only">
+            FDND Home
+          </span>
+          <svg width="93" height="52" viewBox="0 0 94 53" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Group" transform="translate(0.500000, 0.500000)" fill-rule="nonzero">
+              <g>
+                <rect id="Rectangle" class="logo-salmon" x="0.5" y="3.5" width="89" height="48" rx="7.5"></rect>
+                <path
+                  d="M82,3 C86.418278,3 90,6.581722 90,11 L90,44 C90,48.418278 86.418278,52 82,52 L8,52 C3.581722,52 0,48.418278 0,44 L0,11 C0,6.581722 3.581722,3 8,3 L82,3 Z M82,4 L8,4 C4.13400675,4 1,7.13400675 1,11 L1,44 C1,47.8659932 4.13400675,51 8,51 L82,51 C85.8659932,51 89,47.8659932 89,44 L89,11 C89,7.13400675 85.8659932,4 82,4 Z"
+                  id="Rectangle" class="logo-blue"></path>
+                <rect id="Rectangle" class="logo-salmon" x="3.5" y="0.5" width="89" height="48" rx="7.5"></rect>
+                <path
+                  d="M85,0 C89.418278,0 93,3.581722 93,8 L93,41 C93,45.418278 89.418278,49 85,49 L11,49 C6.581722,49 3,45.418278 3,41 L3,8 C3,3.581722 6.581722,0 11,0 L85,0 Z M85,1 L11,1 C7.13400675,1 4,4.13400675 4,8 L4,41 C4,44.8659932 7.13400675,48 11,48 L85,48 C88.8659932,48 92,44.8659932 92,41 L92,8 C92,4.13400675 88.8659932,1 85,1 Z"
+                  id="Rectangle" class="logo-blue"></path>
+                <polygon id="Path" class="logo-blue"
+                  points="22.3945 33 18 33 18 16 27.7604 16 27.7604 19.686 22.3945 19.686 22.3945 22.9302 27.3425 22.9302 27.3425 26.6163 22.3945 26.6163">
+                </polygon>
+                <path
+                  d="M43.5656,24.1395 C43.5656,26.1163 43.2078,27.7597 42.4924,29.0698 C41.7769,30.3798 40.7677,31.3643 39.4648,32.0233 C38.1695,32.6744 36.6444,33 34.8896,33 L29.5462,33 L29.5462,16 L35.2624,16 C37.0398,16 38.546,16.314 39.7811,16.9419 C41.0162,17.5698 41.9539,18.4884 42.594,19.6977 C43.2417,20.907 43.5656,22.3876 43.5656,24.1395 Z M38.9339,24.3023 C38.9339,23.2713 38.7983,22.4186 38.5272,21.7442 C38.2636,21.062 37.8644,20.5543 37.3297,20.2209 C36.795,19.8798 36.121,19.7093 35.3076,19.7093 L34.0085,19.7093 L34.0085,29.2326 L35.0026,29.2326 C36.3582,29.2326 37.3523,28.8295 37.9849,28.0233 C38.6176,27.2093 38.9339,25.969 38.9339,24.3023 Z"
+                  id="Shape" class="logo-blue"></path>
+                <path
+                  d="M61.3363,33 L55.4846,33 L49.4521,21.0233 L49.3504,21.0233 C49.3881,21.3876 49.422,21.8256 49.4521,22.3372 C49.4822,22.8488 49.5086,23.3721 49.5312,23.907 C49.5538,24.4341 49.5651,24.9109 49.5651,25.3372 L49.5651,33 L45.6112,33 L45.6112,16 L51.4403,16 L57.4502,27.814 L57.518,27.814 C57.4954,27.4419 57.4728,27.0116 57.4502,26.5233 C57.4276,26.0271 57.405,25.5271 57.3824,25.0233 C57.3674,24.5194 57.3598,24.0736 57.3598,23.686 L57.3598,16 L61.3363,16 L61.3363,33 Z"
+                  id="Path" class="logo-blue"></path>
+                <path
+                  d="M78,24.1395 C78,26.1163 77.6423,27.7597 76.9268,29.0698 C76.2113,30.3798 75.2022,31.3643 73.8993,32.0233 C72.6039,32.6744 71.0788,33 69.3241,33 L63.9807,33 L63.9807,16 L69.6969,16 C71.4742,16 72.9805,16.314 74.2156,16.9419 C75.4507,17.5698 76.3883,18.4884 77.0285,19.6977 C77.6762,20.907 78,22.3876 78,24.1395 Z M73.3683,24.3023 C73.3683,23.2713 73.2328,22.4186 72.9616,21.7442 C72.698,21.062 72.2989,20.5543 71.7642,20.2209 C71.2295,19.8798 70.5554,19.7093 69.742,19.7093 L68.4429,19.7093 L68.4429,29.2326 L69.437,29.2326 C70.7926,29.2326 71.7868,28.8295 72.4194,28.0233 C73.052,27.2093 73.3683,25.969 73.3683,24.3023 Z"
+                  id="Shape" class="logo-blue"></path>
+              </g>
+            </g>
+          </g>
+        </svg>
+        </a>
+        <div class="footer__top-bottom">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="/about.html" class="footer__link">
+                about
+              </a>
+            </li>
+            <li class="footer__item">
+              <a href="#all-work" class="footer__link">
+                all work
+              </a>
+            </li>
+            <li class="footer__item">
+              <a href="#contact" class="footer__link">
+                contact
+              </a>
+            </li>
+          </ul>
+          <div class="footer__socials">
+            <a href="#twitter">
+              <span class="sr-only">twitter</span>
+              <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16 1.78411C15.4114 2.01322 14.7786 2.168 14.1147 2.23763C14.7924 1.88119 15.313 1.31677 15.558 0.644175C14.9237 0.974294 14.2212 1.21393 13.4734 1.34309C12.8747 0.783297 12.0216 0.433594 11.0774 0.433594C9.26463 0.433594 7.79479 1.72311 7.79479 3.3137C7.79479 3.53944 7.82383 3.75928 7.87983 3.97007C5.15166 3.84997 2.73294 2.70329 1.1139 0.960745C0.831335 1.38612 0.669414 1.88084 0.669414 2.40869C0.669414 3.40797 1.24894 4.28952 2.12974 4.806C1.59166 4.79105 1.08549 4.66148 0.642934 4.44577C0.642561 4.45778 0.642561 4.46985 0.642561 4.48199C0.642561 5.87744 1.77408 7.04145 3.27577 7.30622C3.00033 7.37206 2.71032 7.40723 2.41096 7.40723C2.19944 7.40723 1.99385 7.38912 1.79336 7.35557C2.21113 8.49979 3.42337 9.33249 4.85985 9.35566C3.73641 10.1282 2.32104 10.5887 0.783042 10.5887C0.518081 10.5887 0.256801 10.575 0 10.5484C1.45272 11.3656 3.17817 11.8425 5.03193 11.8425C11.0698 11.8425 14.3716 7.45377 14.3716 3.6476C14.3716 3.52273 14.3684 3.39856 14.3621 3.27495C15.0034 2.86895 15.5599 2.36173 15.9999 1.78411H16Z"
+                  fill="#FFC48F" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="footer__bottom">
+      <nav class="footer__nav">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="#all-work" class="footer__link">
+              Cookies
+            </a>
+          </li>
+          <li class="footer__item">
+            <a href="#contact" class="footer__link">
+              Privacy policy
+            </a>
+          </li>
+          <li class="footer__item">
+            &copy; fdnd.nl
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  <script src="./src/scripts/index.js"></script>
+</body>
+
+</html>

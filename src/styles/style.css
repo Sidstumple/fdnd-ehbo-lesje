@@ -814,3 +814,45 @@ label[for="underage"] {
 }
 
 
+.header-text-animation {
+  position: relative;
+  height: 100vh;
+  padding: 20vw;
+  --y: 0;
+  --rotate: 0;
+}
+
+.header-text-animation h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 18vw;
+}
+
+.header-text-animation p {
+  text-align: center;
+}
+
+.header-text-animation p + p {
+  font-weight: 600;
+  margin-top: 1em;
+}
+
+.header-text-animation h1 span {
+  transform: translateY(calc(var(--y) * 0.05em * var(--index))) rotate(calc(var(--rotate) * 7deg));
+}
+
+.header-text-animation .grace {
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  pointer-events: none;
+}
+
+.header-text-animation .grace img {
+  position: absolute;
+  opacity: 0;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  transform: translateX(calc(var(--x) * 100vw)) translateY(calc(var(--y) * 100vh));
+}
